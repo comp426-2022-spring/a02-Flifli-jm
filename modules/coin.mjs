@@ -10,13 +10,15 @@
  * @returns {string} 
  * 
  * example: coinFlip()
- * returns: heads
+ * returns: heads|tails
  * 
  */
 
-function coinFlip() {
+export function coinFlip() {
+  return ((Math.floor(Math.random() * 2)) == 0) ? ("heads") : ("tails") ;
 
 }
+//console.log(coinFlip())
 
 /** Multiple coin flips
  * 
@@ -37,10 +39,15 @@ function coinFlip() {
     ]
  */
 
-function coinFlips(flips) {
-
+export function coinFlips(flips) {
+  let ans = new Array();
+  while(flips != 0) {
+    ans[flips] = coinFlip();
+    flips--;
+  }
+  return ans;
 }
-
+//console.log(coinFlips(10))
 /** Count multiple flips
  * 
  * Write a function that accepts an array consisting of "heads" or "tails" 
@@ -54,8 +61,16 @@ function coinFlips(flips) {
  * @returns {{ heads: number, tails: number }}
  */
 
-function countFlips(array) {
-
+export function countFlips(array) {
+   let cntHead = 0;
+   let cntTail = 0;
+   let i = 0;
+   for (i = 0; i < array.length; i++) {
+     if(array[i] == 'heads') cntHead++;
+     else cntTail++;
+   }
+   let cnt = {tails: cntTail, heads: cntHead}
+   return cnt;
 }
 
 /** Flip a coin!
@@ -69,8 +84,13 @@ function countFlips(array) {
  * returns: { call: 'tails', flip: 'heads', result: 'lose' }
  */
 
-function flipACoin(call) {
-
+export function flipACoin(call) {
+  let re = coinFlip();
+  if(call == 'heads' || call == 'tails') {
+    if(call == re) return "win";
+    else return "lose";
+  }
+  else return "Error: no input";
 }
 
 
