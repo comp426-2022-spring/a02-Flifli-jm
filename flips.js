@@ -8,7 +8,7 @@ if(args.number != null) {
     flipsNum = args.number;
 }
 function flipResult(flipsResult) {
-    let ans = `[]`
+    let ans = `[`
     let num = flipsResult.length
     for(let i = 1; i <= num; i++) {
         if(i != 1)//no comma at first
