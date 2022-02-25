@@ -10,7 +10,7 @@ if(args.number != null) {
 function flipResult(flipsResult) {
     let ans = `[`
     let num = flipsResult.length
-    for(let i = 1; i <= num; i++) {
+    for(let i = 0; i < num; i++) {
         if(i != 1)//no comma at first
         ans += `,`
         ans += `${flipsResult[i]}`

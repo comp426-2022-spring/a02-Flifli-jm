@@ -91,7 +91,7 @@ export function flipACoin(call) {
     if(call == re) result = 'win';
     else result = 'lose';
   }
-  const ans = {call: call, flip: re, result: result}
+  let ans = {call: call, flip: re, result: result}
   return ans;
 }
 
