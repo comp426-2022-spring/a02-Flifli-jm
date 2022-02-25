@@ -1,7 +1,7 @@
 import { coinFlips, flipACoin } from "./modules/coin.mjs";
 import minimist from 'minimist';
 const args = minimist (process.argv);
-agrs['call']
+args['call']
 const call = args.call
 if(call == null) {
     console.error("Error: invalid input")
