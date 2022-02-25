@@ -86,7 +86,7 @@ export function countFlips(array) {
 
 export function flipACoin(call) {
   let re = coinFlip();
-  const result = '';
+  let result = '';
   if(call == 'heads' || call == 'tails') {
     if(call == re) result = 'win';
     else result = 'lose';
