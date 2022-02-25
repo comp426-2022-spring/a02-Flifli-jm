@@ -89,7 +89,7 @@ export function flipACoin(call) {
   const result = '';
   if(call == 'heads' || call == 'tails') {
     if(call == re) result = 'win';
-    else return result = 'lose';
+    else result = 'lose';
   }
   const ans = {call: call, flip: re, result: result}
   return ans;
