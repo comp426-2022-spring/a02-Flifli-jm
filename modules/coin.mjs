@@ -41,7 +41,7 @@ export function coinFlip() {
 
 export function coinFlips(flips) {
   let ans = new Array();
-  while(flips != 0) {
+  while(flips >= 0) {
     ans[flips] = coinFlip();
     flips--;
   }
