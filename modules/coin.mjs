@@ -86,11 +86,13 @@ export function countFlips(array) {
 
 export function flipACoin(call) {
   let re = coinFlip();
+  const result = '';
   if(call == 'heads' || call == 'tails') {
-    if(call == re) return "win";
-    else return "lose";
+    if(call == re) result = 'win';
+    else return result = 'lose';
   }
-  else return "Error: no input";
+  const ans = {call: call, flip: re, result: result}
+  return ans;
 }
 
 
